@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 Language App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>2026 Language App</h1>
+      <p>Build your vocabulary and test yourself with quick translation quizzes.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Add vocabulary</h2>
+      <form id="vocab-form" class="grid-form">
+        <label>
+          Source word
+          <input id="source-word" required placeholder="hello" />
+        </label>
+        <label>
+          Translation
+          <input id="target-word" required placeholder="hola" />
+        </label>
+        <label>
+          Notes (optional)
+          <input id="notes" placeholder="informal greeting" />
+        </label>
+        <button type="submit">Add card</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <h2>Your cards</h2>
+        <button id="clear-all" class="ghost">Clear all</button>
+      </div>
+      <ul id="vocab-list" class="vocab-list"></ul>
+      <p id="empty-state" class="empty">No cards yet. Add your first word above.</p>
+    </section>
+
+    <section class="panel">
+      <div class="row">
+        <h2>Quiz</h2>
+        <button id="new-question" class="ghost">Next question</button>
+      </div>
+      <p id="quiz-prompt" class="quiz-prompt">Add at least one card to start quizzing.</p>
+      <form id="quiz-form" class="quiz-form">
+        <input id="quiz-answer" placeholder="Type the translation" autocomplete="off" />
+        <button type="submit">Check</button>
+      </form>
+      <p id="quiz-feedback" class="feedback"></p>
+      <p id="quiz-score" class="score">Score: 0 / 0</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
