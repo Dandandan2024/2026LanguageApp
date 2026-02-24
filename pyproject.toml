@@ -1,0 +1,10 @@
+[project]
+name = "languageapp-backend"
+version = "0.2.0"
+description = "Deterministic conversational SRS backend"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
